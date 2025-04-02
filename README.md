@@ -1,4 +1,4 @@
-# HelpBridge
+
 
 Designed and developed a responsive web application for disaster reporting and volunteer registration to assist in
 disaster relief efforts.
