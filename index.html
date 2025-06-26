@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Relief Coordination System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav id="navbar">
+            <div class="navbar-container">
+                <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+                <h1 class="mainhead">Disaster Relief Coordination System</h1>
+            </div>
+            
+            <div class="image-container">
+                <img class="img1" src="img1.png">
+                <img class="img2" src="logo.png">
+            </div>
+
+            <div class="nav-options">
+                <span class="nav-item" onclick="scrollToSection('hero')"><a>Home</a></span>
+                <span class="nav-item" onclick="scrollToSection('about')"><a>About Us</a></span>
+                <span class="nav-item" onclick="scrollToSection('report')"><a>Report Disaster</a></span>
+                <span class="nav-item" onclick="scrollToSection('volunteer')"><a>Volunteer</a></span>
+                <span class="nav-item" onclick="scrollToSection('donate')"><a>Donate</a></span>
+                <span class="nav-item" onclick="scrollToSection('funds')"><a>Funds</a></span>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">✖</span>
+        <ul>
+            <li><a href="national-issues.html">National Issues</a></li>
+            <li><a href="precautions.html">Precautions</a></li>
+            <li><a href="food-and-shelter.html">Food and Shelter</a></li>
+            <li><a href="emergency-tips.html">Emergency Tips</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div id="main-content">
+            <div id="content-display">
+                <!-- Default content -->
+                <h1 id="h1">Welcome to Disaster Relief Coordination System</h1>
+            </div>
+        </div>
+    
+    <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <h2>Helping Communities in Crisis</h2>
+            <p>Join us in making a difference. Report disasters, volunteer, and contribute to the cause.</p>
+            <button class="btn" onclick="scrollToSection('volunteer')">Get Involved</button>
+        </section>
+    
+        <section id="about">
+            <h2>About Us</h2>
+            <p>When disasters strike, every second counts.
+                Our platform empowers communities to act faster by connecting those in need with volunteers, donors, and resources. Whether you're reporting a flood, offering your skills, or contributing essential supplies — every action helps strengthen the disaster response system.Together, we’re building a faster, smarter, and more resilient way to respond to emergencies when it matters most.</p>
+        </section>
+    
+        <section id="report">
+            <h2>Report a Disaster</h2>
+            <form id="disaster-form">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                
+                <label for="disaster-type">Type of Disaster:</label>
+                <select id="disaster-type" name="disaster-type">
+                    <option value="earthquake">Earthquake</option>
+                    <option value="flood">Flood</option>
+                    <option value="fire">Fire</option>
+                    <option value="cyclone">Cyclone</option>
+                    <option value="femine">Femine</option>
+                    <option value="sandstorm">Sandstorm</option>
+                    <option value="ligthning">Lightning</option>
+                    <option value="other">Other</option>
+                </select>
+    
+                <label for="details">Details:</label>
+                <textarea id="details" name="details" required></textarea>
+    
+                <button type="submit" class="btn">Submit Report</button>
+                <!-- Placeholder for success message -->
+                <p id="report-success-message" style="color: green; display: none;">Thank you! Your disaster report has been submitted successfully.</p>
+                <!-- Placeholder for already submitted message -->
+                <p id="already-submitted-message" style="color: red; display: none;">You have already submitted a report. Please contact us if you need further assistance.</p>
+            </form>
+        </section>
+    
+        <section id="volunteer">
+            <h2>Become a Volunteer</h2>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills"></textarea>
+    
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+    
+        <section id="donate">
+            <h2>Support Our Cause</h2>
+            <p>Your contributions help us provide aid to affected communities.</p>
+            <button class="btn" onclick="handleDonate()">Donate Now</button>
+        </section>
+    
+        <section id="funds">
+            <h2>Current Funds Raised</h2>
+            <p><span id="fund-amount1">0</span></p>
+          </section>
+    
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>📧 Email: info@disasterconnect.org | 📞 Phone: +1 123-456-7890</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Disaster Relief Coordination System. All Rights Reserved.</p>
+        <div class="social-media">
+            <a><i class="fa-brands fa-x-twitter"></i></a>
+           <a> <i class="fa-brands fa-facebook"></i></a>
+           <a><i class="fa-brands fa-instagram"></i></a> 
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
