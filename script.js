@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://helpbridge.onrender.com";
+const BACKEND_URL = "helpbridge-production.up.railway.app";
 // Scroll to a specific section smoothly
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
