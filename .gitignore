@@ -1,1 +1,12 @@
-node_modules/\n.env\n.DS_Store\n*.log
+# Node and backend dependencies
+node_modules/
+.env
+.DS_Store
+*.log
+
+# Logs
+npm-debug.log*
+
+# OS system files
+Thumbs.db
+
