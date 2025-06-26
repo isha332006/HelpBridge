@@ -26,9 +26,6 @@ router.post('/volunteer', async (req, res) => {
   }
 });
 
-module.exports = router;
-
-// Add a new donation
 router.post('/donate', async (req, res) => {
   try {
     const donation = new Donation({ amount: req.body.amount });
@@ -39,7 +36,6 @@ router.post('/donate', async (req, res) => {
   }
 });
 
-// Get total donated amount
 router.get('/donations/total', async (req, res) => {
   try {
     const total = await Donation.aggregate([
@@ -50,3 +46,6 @@ router.get('/donations/total', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// ✅ Moved this line to the very end!
+module.exports = router;
