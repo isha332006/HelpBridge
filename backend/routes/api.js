@@ -47,5 +47,5 @@ router.get('/donations/total', async (req, res) => {
   }
 });
 
-// ✅ Moved this line to the very end!
+// Moved this line to the very end!
 module.exports = router;
